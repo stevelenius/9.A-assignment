@@ -22,7 +22,7 @@ let recordsArray = [
   {
   song: "Rhapsody in Blue",
   artist: "George Gershwin with Paul Whiteman and His Orchestra",
-  image: "/images/RhapsodyGershwin-200x200.png",
+  image: 'https://slenius.studio.mcad.edu/webprog/9.A-assignment/images/RhapsodyGershwin-200x200.png',
   label: "Victor",
   recordNo: "55225",
   year: "1924"
@@ -31,7 +31,7 @@ let recordsArray = [
   {
   song: "Jazz Me Blues",
   artist: "Bix Beiderbecke and his Gang",
-  image: "/images/JazzMeBeiderbecke-200x200.png",
+  image: 'https://slenius.studio.mcad.edu/webprog/9.A-assignment/images/JazzMeBeiderbecke-200x200.png',
   label: "Vocalion",
   recordNo: "3042",
   year: "1927"
@@ -40,7 +40,7 @@ let recordsArray = [
   {
   song: "Mood Indigo",
   artist: "Duke Ellington & His Famous Orchestra (vocal by Ivie Anderson)",
-  image: "/images/MoodIndigoEllington-200x200.png",
+  image: 'https://slenius.studio.mcad.edu/webprog/9.A-assignment/images/MoodIndigoEllington-200x200.png',
   label: "Columbia",
   recordNo: "35427",
   year: "1940"
@@ -49,7 +49,7 @@ let recordsArray = [
   {
   song: "More Than You Know",
   artist: "Billie Holiday",
-  image: "/images/MoreThanYouKnowHoliday-200x200.png",
+  image: 'https://slenius.studio.mcad.edu/webprog/9.A-assignment/images/MoreThanYouKnowHoliday-200x200.png',
   label: "Columbia",
   recordNo: "36117",
   year: "1941"
@@ -58,7 +58,7 @@ let recordsArray = [
   {
   song: "Down For Double",
   artist: "Count Basie and His Orchestra",
-  image: "/images/DownForDoubleBasie-200x200.png",
+  image: 'https://slenius.studio.mcad.edu/webprog/9.A-assignment/images/DownForDoubleBasie-200x200.png',
   label: "Okeh",
   recordNo: "6584",
   year: "1942"
