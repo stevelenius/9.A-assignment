@@ -1,0 +1,65 @@
+<!-- index.html for 9.A-assignment (Componentizing a Collection) -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Assignment 9.A Componentizing a Collection</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+</head>
+
+<body>
+  <h1>My Vintage Jazz Records</h1>
+  <h3>Mostly inherited from my grandfather</h3>
+
+  <div id="myRecords">
+    <table>
+      <tr>
+        <th>Song</th>
+        <th>Artist</th>
+        <th>Label Image or Label Name</th>
+        <th>Record No.</th>
+        <th>Year</th>
+      </tr>
+<!-- Use v-for to loop through array and build table; 
+      use v-bind:class to make odd rows darker; 
+      because table uses <tr must use is="table-row" to call component rather than just calling component-->
+      <tr is="table-row" v-for="(record, index) in records" v-bind:class="{darkrow: index%2==0}" 
+          v-bind:song="record.song" 
+          v-bind:artist="record.artist" 
+          v-bind:image="record.image" 
+          v-bind:record-no="record.recordNo" 
+          v-bind:year="record.year">
+        </tr>
+    </table>
+<!-- Clicking submit button starts by checking song field to be sure it has
+      text in it. Then every other field exept image URL is checked, and if they
+      all have text, control passes to submitHandler method. -->
+    <form v-on:submit.prevent="checkSong">
+     <fieldset>
+      <legend><strong>Add a record to the collection</strong> <span style='font-size: 16px'>(Image URL optional; all other fields must be filled in)</span></legend>
+      <div>
+        <label class="song" for="song">Song <input id="song" type="text" v-model="newRecordsObj.song"></label>
+        &nbsp;<label class="artist" for="artist">Artist <input id="artist" type="text" v-model="newRecordsObj.artist"></label>
+      </div>
+      <div>
+        <label class="image" for="image">Image URL <input id="image" type="text" v-model="newRecordsObj.image"></label>
+      </div>
+      <div>
+        <label class="label" for="label">Label <input id="label" type="text" v-model="newRecordsObj.label"></label>
+        &nbsp;<label class="number" for="recordNo">Record No. <input id="recordNo" type="text" v-model="newRecordsObj.recordNo"></label>
+        &nbsp;<label class="year" for="year">Year <input id="year" type="text" v-model="newRecordsObj.year"></label>
+      </div>
+      <button type="submit">Submit</button>
+     </fieldset>
+   </form>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="9.A-assignment.js"></script>
+
+</body>
+</html>
