@@ -29,7 +29,8 @@
       <tr is="table-row" v-for="(record, index) in records" v-bind:class="{darkrow: index%2==0}" 
           v-bind:song="record.song" 
           v-bind:artist="record.artist" 
-          v-bind:image="record.image" 
+          v-bind:image="record.image"
+          v-bind:label="record.label" 
           v-bind:record-no="record.recordNo" 
           v-bind:year="record.year">
         </tr>
